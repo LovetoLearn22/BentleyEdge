@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="IMAGES/BentleyEdgeTransparent%20copy.png" type="image/x-icon">
+    <style>
+        .content-card {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .content-card .card-img-top {
+            width: 100%;
+            height: 200px; /* Set a fixed height to make the image square */
+            object-fit: cover; /* Ensures the image covers the area */
+        }
+
+        .card-body {
+            height: 150px; /* Adjust for uniform body text */
+        }
+    </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+<div id="navbar-container"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("nav-bar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+    });
+</script>
+
+
+<div class="container my-5">
+    <!-- Main Featured Article -->
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="background-image: url('IMAGES/Welcome_to_BentleyEdge copy.png'); background-size: cover; background-position: center;">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">Welcome to BentleyEdge: Your Gateway to Knowledge</h1>
+            <p class="lead my-3">Explore BentleyEdge, where the best of Bentley University's insights, research, and student projects come together to empower you.</p>
+            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Learn more about our mission...</a></p>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <!-- First Side Article -->
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Leadership</strong>
+                    <h3 class="mb-0">What the Best Leadership Teams Do Right</h3>
+                    <div class="mb-1 text-muted">October 15, 2024</div>
+                    <p class="card-text mb-auto">Insights into effective strategies used by successful leadership teams around the world.</p>
+                    <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="IMAGES/3c6bf642850f5d6f4fc63dca87621eeb.gif" class="img-fluid" style="width: 200px; height: 250px; object-fit: cover;" alt="Leadership Image">
+                </div>
+            </div>
+        </div>
+        <!-- Second Side Article -->
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success">Strategy</strong>
+                    <h3 class="mb-0">When You’re Told You’re Not Strategic Enough</h3>
+                    <div class="mb-1 text-muted">October 25, 2024</div>
+                    <p class="card-text mb-auto">How to articulate and project a strategic mindset in the workplace effectively.</p>
+                    <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="IMAGES/20b5b66e9c05c31c075a178071ab8ec3.gif" class="img-fluid" style="width: 200px; height: 250px; object-fit: cover;" alt="Strategy Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <!-- Latest Articles Section -->
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">The Latest</h3>
+
+            <article class="blog-post mb-4">
+                <h2 class="blog-post-title">Let’s End Toxic Productivity</h2>
+                <p class="blog-post-meta">By Jennifer Moss</p>
+                <p>Learn why it's time to rethink our culture of relentless productivity and the importance of well-being at work.</p>
+                <a href="#" class="text-primary">Continue reading...</a>
+            </article>
+
+            <article class="blog-post mb-4">
+                <h2 class="blog-post-title">Why the U.S. Healthcare System Is So Much Worse Than Its Peers</h2>
+                <p class="blog-post-meta">By David Blumenthal, Evan D. Gumas, and Reginald D. Williams II</p>
+                <p>Explore the challenges facing the healthcare system and why reforms are needed to bridge the gap.</p>
+                <a href="#" class="text-primary">Continue reading...</a>
+            </article>
+
+            <article class="blog-post mb-4">
+                <h2 class="blog-post-title">How to Navigate a Leadership Transition</h2>
+                <p class="blog-post-meta">Audio | Leadership</p>
+                <p>Expert advice on how to handle the complex process of leadership transitions in any organization.</p>
+                <a href="#" class="text-primary">Listen to Audio</a>
+            </article>
+        </div>
+
+        <!-- Sidebar with Subscription and Recent Posts -->
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4 class="fst-italic">Stay Informed</h4>
+                    <p class="mb-0">Sign up for The Daily Alert - your source for the latest insights, articles, and content from BentleyEdge.</p>
+                    <a href="sign_up.html" class="btn btn-danger mt-3">Sign Up</a>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Recent Posts</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">The Evolution of Workplace Culture</a></li>
+                        <li><a href="#">Understanding the Green Economy</a></li>
+                        <li><a href="#">Top Skills for Future Leaders</a></li>
+                        <li><a href="#">How to Manage Remote Teams Effectively</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-4">
+    <!-- Grid Section -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <a href="link-to-article1.html" class="card content-card h-100 text-decoration-none">
+                <img src="IMAGES/grid/122bafd8161aa8f199585e600bf44ac4.jpg" class="card-img-top" alt="Leadership">
+                <div class="card-body">
+                    <span class="text-muted">Audio</span>
+                    <h5 class="card-title">Why DEI Still Matters (and How to Get It Right)</h5>
+                    <p class="card-text">Leadership</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="news_article.html" class="card content-card h-100 text-decoration-none">
+                <img src="IMAGES/grid/BEdgexBlockchainAss.png" class="card-img-top" alt="Team Collaboration">
+                <div class="card-body">
+                    <h5 class="card-title">The Power of Collaboration: Expanding Horizons Through Shared Vision</h5>
+                    <p class="card-text">BentleyEdge: Francisco Cunha</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="link-to-article3.html" class="card content-card h-100 text-decoration-none">
+                <img src="IMAGES/grid/66807938ef25e1cd190f512817119e7a.gif" class="card-img-top" alt="AI Integration">
+                <div class="card-body">
+                    <span class="text-muted">Audio</span>
+                    <h5 class="card-title">How Pernod Ricard Is Integrating AI into Its Workforce</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/2450730d7b6f7bb3b1e81da8d6293671.jpg" class="card-img-top" alt="Employee Value">
+                <div class="card-body">
+                    <h5 class="card-title">3 Ways to Make Sure High Performers Feel Valued</h5>
+                    <p class="card-text">Zach Mercurio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/cd001c00272c87102eb42768469ffc4d.jpg" class="card-img-top" alt="Hybrid Work">
+                <div class="card-body">
+                    <h5 class="card-title">One Company A/B Tested Hybrid Work. Here’s What They Found.</h5>
+                    <p class="card-text">Nicholas Bloom, James Liang and Ruobing Han</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/e226a8ac69560df556b24fab1e5345f5.jpg" class="card-img-top" alt="Geopolitics of Tech">
+                <div class="card-body">
+                    <h5 class="card-title">Navigating the New Geopolitics of Tech</h5>
+                    <p class="card-text">Tobias Feakin</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/f455bf31de7322e2b2ebe50bb5af1596.gif" class="card-img-top" alt="AI Transformation">
+                <div class="card-body">
+                    <h5 class="card-title">True AI Transformation Depends on the Power and Capacity of Solid-State Drives</h5>
+                    <p class="card-text text-muted">Sponsor content from Solidigm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/1df89d480707fe7d8d325ec984286191.jpg" class="card-img-top" alt="Part-Time Executives">
+                <div class="card-body">
+                    <span class="text-muted">Audio</span>
+                    <h5 class="card-title">The Growing Trend of Part-Time Executives</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card content-card">
+                <img src="IMAGES/grid/83ed676d6bda0b13d743f401e97abff4.gif" class="card-img-top" alt="Part-Time Executives">
+                <div class="card-body">
+                    <span class="text-muted">Audio</span>
+                    <h5 class="card-title">Viewers abandon television on election day</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="bg-light p-4 p-md-5 text-center rounded shadow-sm">
+        <h3 class="fw-bold">Get the Best in Management Thinking</h3>
+        <p class="lead mb-4">Subscribe to access exclusive insights and strategies from the experts.</p>
+        <a href="subscribe.html" class="btn btn-primary btn-lg text-white">Subscribe</a>
+    </div>
+</div>
+
+
+
+<div id="footer-container"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
